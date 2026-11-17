@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cofre Secreto</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <h1>🔐 Cofre Secreto</h1>
+
+        <p class="descricao">
+            Descubra a senha e conquiste o prêmio!
+        </p>
+
+        <!-- Imagens dos cofres -->
+
+        <div class="area-cofre">
+
+            <img
+                id="imagemCofre"
+                src="imagen/cofre fechado.png.png"
+                alt="Cofre fechado"
+            >
+
+            <img
+                id="imagemCofreAberto"
+                src="imagen/cofre aberto.png.png"
+                alt="Cofre aberto com prêmio"
+            >
+
+        </div>
+
+        <h3>Digite uma senha entre 1 e 50</h3>
+
+        <input
+            type="number"
+            id="numero"
+            min="1"
+            max="50"
+            placeholder="Digite um número"
+        >
+
+        <button id="tentar">
+            DESBLOQUEAR COFRE
+        </button>
+
+        <p id="mensagem">Aguardando tentativa...</p>
+
+        <p id="tentativas">Tentativas: 0/7</p>
+
+        <button id="reiniciar" class="reiniciar">
+            REINICIAR JOGO
+        </button>
+
+    </main>
+
+    <!-- Tela de sucesso -->
+
+    <div id="overview" class="overview">
+
+        <div class="janela">
+
+            <h2>🎉 COFRE DESBLOQUEADO!</h2>
+
+            <p>Parabéns! Você conseguiu encontrar a senha!</p>
+
+            <p id="resultado"></p>
+
+            <button id="jogarNovamente">
+                JOGAR NOVAMENTE
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

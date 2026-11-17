@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #101820, #263c4d);
+    font-family: Arial, sans-serif;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background: #1b2935;
+    width: 90%;
+    max-width: 450px;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 35px #0009;
+}
+
+h1 {
+    color: #f5c542;
+    margin-bottom: 10px;
+}
+
+.descricao {
+    color: #bbb;
+    margin-bottom: 20px;
+}
+
+.area-cofre {
+    width: 100%;
+    margin: 20px auto;
+    min-height: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.area-cofre img {
+    width: 100%;
+    max-height: 240px;
+    object-fit: contain;
+    transition: 0.5s;
+}
+
+/* Imagem inicial */
+
+#imagemCofre {
+    display: block;
+}
+
+/* Cofre aberto começa escondido */
+
+#imagemCofreAberto {
+    display: none;
+    filter: drop-shadow(0 0 20px gold);
+    animation: abrir 0.8s;
+}
+
+@keyframes abrir {
+    from {
+        transform: scale(0.6);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+input {
+    width: 100%;
+    padding: 14px;
+    border-radius: 8px;
+    border: 2px solid #f5c542;
+    text-align: center;
+    font-size: 18px;
+    margin: 12px 0;
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    background: #f5c542;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 8px;
+}
+
+button:hover {
+    background: #ffda69;
+    transform: scale(1.03);
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+#mensagem {
+    margin: 20px 0;
+    min-height: 20px;
+    font-weight: bold;
+}
+
+#tentativas {
+    color: #bbb;
+    margin-bottom: 12px;
+}
+
+.alerta {
+    color: #ff5555;
+    animation: piscar 0.7s infinite alternate;
+}
+
+@keyframes piscar {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0.3;
+    }
+}
+
+.reiniciar {
+    background: #3d5367;
+    color: white;
+}
+
+/* Tela suspensa */
+
+.overview {
+    position: fixed;
+    inset: 0;
+    background: #000d;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.janela {
+    background: #1b2935;
+    padding: 35px;
+    width: 90%;
+    max-width: 380px;
+    border-radius: 20px;
+    text-align: center;
+    border: 2px solid #f5c542;
+    animation: aparecer 0.6s;
+}
+
+.janela h2 {
+    color: #f5c542;
+    margin-bottom: 15px;
+}
+
+.janela p {
+    margin: 12px 0;
+}
+
+@keyframes aparecer {
+    from {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
